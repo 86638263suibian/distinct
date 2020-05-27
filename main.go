@@ -3,12 +3,15 @@ package main
 import (
 	"bufio"
 	"crypto/md5"
+	"flag"
 	"fmt"
 	"io"
 	"os"
 )
 
 func main() {
+	flag.Parse()
+
 	uniqs := map[string]struct{}{}
 	h := md5.New()
 	s := bufio.NewScanner(os.Stdin)
